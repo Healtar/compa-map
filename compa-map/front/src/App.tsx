@@ -19,8 +19,8 @@ function App() {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [newCoordinates, setNewCoordinates] = useState<NewCoordinates | null>(null);
   const [viewport, setViewport] = useState({
-    longitude: 6.022852270417969,
-    latitude: 47.24039305210101,
+    longitude: 6.008029573150408,
+    latitude: 47.24204623335334,
     zoom: 15,
 
   });
