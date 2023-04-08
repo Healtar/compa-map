@@ -51,9 +51,12 @@ function App() {
   return (
     <div className="App">
       {isLoading ? (
-        <Loader />
+        <div className="flex items-center justify-center h-screen f-full">
+          <Loader />
+        </div>
+        
       ) : (
-        <div className=" justify-center flex items-center h-screen f-full">
+        <div className="justify-center flex items-center h-screen f-full">
           {companies.length > 0 ? (
             <section className="lg:h-4/6 lg:w-4/6 md:w-5/6 md:h-3/6 h-full w-full mx-auto flex gap-x-4 justify-center">
               <CompaniesMap
