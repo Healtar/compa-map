@@ -4,6 +4,7 @@ import Loader from "./Loader";
 export default function NewCompanyForm({
   setNewCoordinates,
   newCoordinates,
+  API_URL
 }: any) {
   //States input's values
 
@@ -26,7 +27,7 @@ export default function NewCompanyForm({
     }
     else {
       try {
-        const response = await fetch("http://compa-map/setCompany.php", {
+        const response = await fetch(`${API_URL}/setCompany.php`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -80,7 +81,7 @@ export default function NewCompanyForm({
       id="form-modal"
       onClick={handleClose}
     >
-      <div className="w-full max-w-lg bg-white p-4 rounded">
+      <div className="lg:w-full lg:max-w-lg h-4/6 w-5/6 overflow-y-scroll md:overflow-hidden  bg-white p-4 rounded">
         {isSending ? (
           <div className="h-56">
             <Loader />

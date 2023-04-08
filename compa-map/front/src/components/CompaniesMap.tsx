@@ -27,7 +27,7 @@ interface IsOnHoverState {
   setIsOnHover: any
 }
 
-export default function CompaniesMap({ companies, viewport, setViewport, selectedCompany, setSelectedCompany, newCoordinates, setNewCoordinates }: Companies & ViewPortState & SelectedCompanyState & NewCoordinatesState) {
+export default function CompaniesMap({ companies, viewport, setViewport, selectedCompany, setSelectedCompany, newCoordinates, setNewCoordinates , API_URL}: Companies & ViewPortState & SelectedCompanyState & NewCoordinatesState & any) {
 
 
 
@@ -56,7 +56,7 @@ export default function CompaniesMap({ companies, viewport, setViewport, selecte
         mapStyle="mapbox://styles/mapbox/streets-v12"
         onClick={handleClick}
       >
-        {companies.map(company => (
+        {companies.map((company: any) => (
           <div key={company.id}>
             <Marker
 
@@ -103,7 +103,7 @@ export default function CompaniesMap({ companies, viewport, setViewport, selecte
       </ReactMapGl>
 
       {newCoordinates ?
-        <NewCompanyForm setNewCoordinates={setNewCoordinates} newCoordinates={newCoordinates} />
+        <NewCompanyForm setNewCoordinates={setNewCoordinates} newCoordinates={newCoordinates} API_URL={API_URL}/>
         : null}
     </div>
   )

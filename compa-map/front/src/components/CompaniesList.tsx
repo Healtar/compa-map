@@ -13,7 +13,7 @@ export default function CompaniesList({ companies, viewport, setViewport, select
 
     return (
 
-        <div className="w-1/4 max-w-md bg-white border border-gray-200 lg:block hidden rounded-lg shadow overflow-hidden ">
+        <div className="w-2/6 max-w-md bg-white border border-gray-200 lg:block hidden rounded-lg shadow overflow-hidden ">
             <div className="flex items-center p-4 mb-4 justify-between">
                 <h5 className="text-xl font-bold leading-none text-gray-900 ">Entreprises</h5>
 
